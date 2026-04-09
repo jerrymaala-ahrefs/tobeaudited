@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+      <li>Nested property with missing @type</li>
+      <li>Nested property with empty @type</li>
+      <li>Nested property with invalid @type + invalid property inside</li>
+      <li>Just invalid property</li>
+      <li>Invalid property with empty value</li>
+      <li>Empty valid property</li>
+      <li>Outdated property (hasProductReturnPolicy)</li>
+      <li>A couple of schema items that should result in parsing error</li>
+    </ul>
+  
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "sku": "trinket-12345",
+      "gtin14": "12345678901234",
+      "hasProductReturnPolicy": "True",
+      "image": [
+        "https://example.com/photos/16x9/trinket.jpg",
+        "https://example.com/photos/4x3/trinket.jpg",
+        "https://example.com/photos/1x1/trinket.jpg"
+      ],
+      "name": "Nice trinket",
+      "description": "Trinket with clean lines",
+      "brand": {
+        "name": "MyBrand"
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.example.com/trinket_offer",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "price_error": "39.99",
+        "priceCurrency": "USD",
+        "priceValidUntil": "2020-11-20",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "3.49",
+            "currency": "USD"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion_error",
+            "addressCountry_error": ""
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "",
+              "minValue": "0",
+              "maxValue": "1"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": "",
+              "maxValue": "5"
+            }
+          }
+        }
+      },
+      "review": {
+        "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4",
+            "bestRating": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Fred Benson"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4",
+          "reviewCount": "89"
+        }
+      }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Introduction to Computer Science and Programming",
+      "description": "Introductory CS course laying out the basics.",
+      "provider":
+        "@type": "Organization",
+        "name": "University of Technology - Eureka",
+        "sameAs": "https://www.example.com"
+      }
+    }
+    </script>
+
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization"
+      "url": "https://www.example.com",
+      "logo": "https://www.example.com/images/logo.png"
+    }
+    </script>
+ </head>
+
+  <body>
+  </body>
+</html>

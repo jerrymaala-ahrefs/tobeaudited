@@ -1,0 +1,211 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+      <li>Multiple schema items on the page</li>
+      <li>Correct and incorrect enum fields</li>
+      <li>Correct and incorrect usage of IDs
+	<ul>
+	  <li>Object with @id + fields and another one referring to that @id</li>
+	  <li>Object with @id that refers to non existent object</li>
+	  <li>Object referring to incorrect type via @id, and thus the "Incorrect type for this prop" error</li>
+      </ul> </li>
+    </ul>
+  
+
+  <script type="application/ld+json">
+  {
+   "@context": "https://schema.org",
+   "@type": "Restaurant",
+   "image": [
+    "https://example.com/photos/1x1/photo.jpg",
+    "https://example.com/photos/4x3/photo.jpg",
+    "https://example.com/photos/16x9/photo.jpg"
+   ],
+   "name": "Dave's Steak House",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "148 W 51st St",
+    "addressLocality": "New York",
+    "addressRegion": "NY",
+    "postalCode": "10019",
+    "addressCountry": "US"
+   },
+   "review": {
+    "@type": "Review",
+    "reviewRating": {
+     "@type": "Rating",
+     "ratingValue": "4",
+     "bestRating": "5"
+    },
+    "author": {
+     "@type": "Person",
+     "name": "Lillian Ruiz"
+    }
+   },
+   "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 40.761293,
+    "longitude": -73.982294
+   },
+   "url": "https://www.example.com/restaurant-locations/manhattan",
+   "telephone": "+12122459600",
+   "servesCuisine": "American",
+   "priceRange": "$$$",
+   "openingHoursSpecification": [
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek":  "Monday",
+     "opens": "11:30",
+     "closes": "22:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": "http://schema.org/Tuesday",
+     "opens": "11:30",
+     "closes": "22:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": [
+      "Wednesday",
+      "Thursday",
+      "Friday_error"
+     ],
+     "opens": "11:30",
+     "closes": "23:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": "Saturday_error",
+     "opens": "16:00",
+     "closes": "23:00"
+    },
+    {
+     "@type": "OpeningHoursSpecification",
+     "dayOfWeek": "Sunday",
+     "opens": "16:00",
+     "closes": "22:00"
+    }
+   ],
+   "menu": "https://www.example.com/menu",
+   "acceptsReservations": "True"
+  }
+  </script>
+
+    <script type = "application/ld+json"> 
+    {
+	    "@context": "https://schema.org",
+	    "@graph": [
+      {
+		    "@type": "WebSite",
+		    "@id": "https://ahrefs.com/blog/#website",
+		    "url": "https://ahrefs.com/blog/",
+		    "name": "SEO Blog by Ahrefs",
+        "image": {
+			    "@id": "https://ahrefs.com/blog/301-redirects/#primaryimage"
+		    },
+		    "publisher": {
+			    "@id": "https://ahrefs.com/blog/#organization"
+		    },
+		    "potentialAction": {
+			    "@type": "SearchAction",
+			    "target": "https://ahrefs.com/blog/?s={search_term_string}",
+			    "query-input": "required name=search_term_string"
+		    }
+	    }, 
+      {
+		    "@type": "WebPage",
+		    "@id": "https://ahrefs.com/blog/301-redirects/#webpage",
+		    "url": "https://ahrefs.com/blog/301-redirects/",
+		    "inLanguage": "en-US",
+		    "name": "301 Redirects for SEO: Everything You Need to Know",
+		    "isPartOf": {
+			    "@id": "https://ahrefs.com/blog/#website"
+		    },
+		    "image": {
+			    "@type": "ImageObject",
+			    "@id": "https://ahrefs.com/blog/301-redirects/#primaryimage",
+			    "url": "https://ahrefs.com/blog/wp-content/uploads/2019/04/fb-301-redirects-1.png",
+			    "caption": ""
+		    },
+		    "primaryImageOfPage": {
+			    "@id": "https://ahrefs.com/blog/301-redirects/#primaryimage"
+		    },
+		    "datePublished": "2019-04-16T14:50:44+00:00",
+		    "dateModified": "2019-04-19T17:53:29+00:00",
+		    "description": "Learn what 301 redirects are, how they affect SEO, how to implement them, and most importantly, how to use them to boost organic traffic."
+      }, 
+      {
+		    "@type": "Article",
+		    "@id": "https://ahrefs.com/blog/301-redirects/#article",
+		    "isPartOf": {
+			    "@id": "https://ahrefs.com/blog/301-redirects/#webpage"
+		    },
+		    "author": {
+			    "@id": "https://ahrefs.com/blog/author/joshua-hardwick/#author",
+			    "name": "Joshua Hardwick"
+		    },
+		    "publisher": {
+			    "@id": "https://ahrefs.com/blog/#organization"
+		    },
+		    "headline": "301 Redirects for <span class=\"caps\">SEO</span>: Everything You Need to Know",
+		    "datePublished": "2019-04-16T14:50:44+00:00",
+		    "dateModified": "2019-04-19T17:53:29+00:00",
+		    "commentCount": 0,
+		    "mainEntityOfPage": "https://ahrefs.com/blog/301-redirects/#webpage",
+		    "image": {
+			    "@id": "https://ahrefs.com/blog/author/joshua-hardwick/#author"
+		    },
+		    "articleSection": "General SEO,Technical SEO"
+	    }, 
+      {
+		    "@type": "Person",
+		    "@id": "https://ahrefs.com/blog/author/joshua-hardwick/#author",
+		    "name": "Joshua Hardwick",
+		    "image": {
+			    "@type": "ImageObject",
+			    "@id": "https://ahrefs.com/blog/#personlogo",
+			    "url": "https://ahrefs.com/blog/wp-content/uploads/2018/04/photo-of-me.jpg",
+			    "caption": "Joshua Hardwick"
+		    },
+		    "description": "Head of Content @ Ahrefs (or, in plain English, I'm the guy responsible for ensuring that every blog post we publish is EPIC). \r\n\r\nFounder @ <a href=\"http://www.theseoproject.org\">The SEO Project</a>.",
+		    "sameAs": ["https://twitter.com/JoshuaCHardwick"]
+	    }
+      ]
+    } 
+    </script>
+
+
+<script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Course",
+        "name": "Typing course",
+        "description": "Learn to type.",
+        "provider": {
+            "@type": "Organization",
+            "name": "Acme University"
+        },
+        "offers": [{
+            "@type": "Offer",
+            "category": "Free"
+        }],
+        "hasCourseInstance": [{
+            "@type": "CourseInstance",
+            "courseMode": "Online",
+            "courseSchedule": {
+               "@type": "Schedule",
+               "repeatCount": 4,
+               "repeatFrequency": "Weekly"
+            }
+         }]
+    }
+</script>    
+    
+ </head>
+
+ <body>
+ </body>
+ 
+</html>

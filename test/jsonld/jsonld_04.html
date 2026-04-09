@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+      <li>Schema item missing @type</li>
+      <li>Schema item with invalid @type</li>
+      <li>Incorrect prop for this type error</li>
+      <li>Incorrect type for this prop error</li>
+      <li>Duplicate properties</li>
+      <li>Values of incorrect data types</li>
+    </ul>
+  
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "headline": "Title of a News Article",
+  "image": [
+    "https://example.com/photos/1x1/photo.jpg",
+    "https://example.com/photos/4x3/photo.jpg",
+    "https://example.com/photos/16x9/photo.jpg"
+  ],
+  "datePublished": "2015-02-05T08:00:00+08:00",
+  "dateModified": "2015-02-05T09:20:00+08:00",
+  "author": [{
+    "@type": "ImageObject",
+    "name": "Jane Doe",
+    "url": "https://example.com/profile/janedoe123"
+  },{
+    "@type": "Person",
+    "name": "John Doe",
+    "url": "https://example.com/profile/johndoe123"
+  }]
+  }
+ </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["VideoObject", "LearningResource"],
+      "distance": "123"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Recipe",
+      "name": "Party Coffee Cake",
+      "image": [
+        "https://example.com/photos/1x1/photo.jpg",
+        "https://example.com/photos/4x3/photo.jpg",
+        "photo2.jpg"
+      ],
+      "author": {
+        "@type": "Person",
+        "duration": "PT1M33S",
+        "name": 101
+      },
+      "datePublished": "5 days ego (error)",
+      "description": "This coffee cake is awesome and perfect for parties.",
+      "prepTime": "PT20M",
+      "cookTime": "PT30M",
+      "totalTime": "PT50M",
+      "keywords": "cake for a party, coffee",
+      "recipeYield": "10",
+      "recipeCategory": "Dessert",
+      "recipeCuisine": "American",
+      "nutrition": {
+        "@type": "NutritionInformation",
+        "calories": "270 calories"
+      },
+      "recipeIngredient": [
+        "2 cups of flour",
+        "3/4 cup white sugar",
+        "2 teaspoons baking powder",
+        "1/2 teaspoon salt",
+        "1/2 cup butter",
+        "2 eggs",
+        "3/4 cup milk"
+        ],
+      "recipeInstructions": [
+        {
+          "@type": "HowToStep",
+          "name": "Preheat",
+          "text": "Preheat the oven to 350 degrees F. Grease and flour a 9x9 inch pan.",
+          "url": "https://example.com/party-coffee-cake#step1",
+          "image": "https://example.com/photos/party-coffee-cake/step1.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Mix dry ingredients",
+          "text": "In a large bowl, combine flour, sugar, baking powder, and salt.",
+          "url": "https://example.com/party-coffee-cake#step2",
+          "image": "step2.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Add wet ingredients",
+          "text": "Mix in the butter, eggs, and milk.",
+          "url": "https://example.com/party-coffee-cake#step3",
+          "image": "https://example.com/photos/party-coffee-cake/step3.jpg"
+        },
+        {
+          "@type": "AggregateRating",
+          "name": "Spread into pan",
+          "text": "Spread into the prepared pan.",
+          "url": "https://example.com/party-coffee-cake#step4",
+          "image": "https://example.com/photos/party-coffee-cake/step4.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Bake",
+          "text": "Bake for 30 to 35 minutes, or until firm.",
+          "url": "https://example.com/party-coffee-cake#step5",
+          "image": "https://example.com/photos/party-coffee-cake/step5.jpg"
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Enjoy",
+          "text": "Allow to cool and enjoy.",
+          "url": "https://example.com/party-coffee-cake#step6",
+          "image": "https://example.com/photos/party-coffee-cake/step6.jpg"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "ratingCount": "18"
+      },
+      "video": {
+        "@type": "VideoObject",
+        "name": "How to make a Party Coffee Cake",
+        "description": "This is how you make a Party Coffee Cake.",
+        "thumbnailUrl": [
+          "https://example.com/photos/1x1/photo.jpg",
+          "https://example.com/photos/4x3/photo.jpg",
+          "https://example.com/photos/16x9/photo.jpg"
+         ],
+        "contentUrl": "https://www.example.com/video123.mp4",
+        "embedUrl": "https://www.example.com/videoplayer?video=123",
+        "uploadDate": "2018-02-05T08:00:00+08:00",
+        "duration": "PT1M33S",
+        "isFamilyFriendly": "Yes",
+        "interactionStatistic": {
+          "@type": "InteractionCounter",
+          "interactionType": { "@type": "WatchAction" },
+          "userInteractionCount": "2347 (error)"
+        },
+        "expires": "2019-02-05T08:00:00+08:00"
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Tom",
+      "name": "Jane",
+      "name": "Karen"
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization_error",
+      "url": "https://www.example.com",
+      "logo": "https://www.example.com/images/logo.png"
+    }
+    </script>
+ 
+ </head>
+
+ <body>
+ </body>
+ 
+</html>

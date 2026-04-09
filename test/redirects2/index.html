@@ -1,0 +1,16 @@
+<html>
+ <head>
+	<title>Test 'Redirects' 2</title>
+ </head>
+ <body>
+
+<h2>Test redirects ( for test 'Prefix' scopes )</h2>
+
+<ul>
+  <li><a href="r_page_a1.html">open redirect chain A</a> &nbsp; r_page_a1(301) -&gt; r_page_a2</li>
+  <li><a href="r_page_b1.html">open redirect chain B</a> &nbsp; r_page_b1(301) -&gt; r_page_b2(301) -&gt; r_page_b3</li>
+  <li><a href="r_page_c1.html">open redirect chain C</a> &nbsp; r_page_c1(302) -&gt; r_page_c2(301) -&gt; r_page_c3(302) -&gt; r_page_c4(301) -&gt; r_page_c5(301) -&gt; r_page_c6</a></li>
+  <li><a href="r_page_d1.html">open redirect chain D</a> &nbsp; r_page_d1(301) -&gt; r_page_d2(302) -&gt; r_page_d3(302) -&gt; r_page_d4</a></li>
+  <li><a href="r_page_e1.html"> &nbsp; redirect loop 301</a>r_page_e1 (301)</li>
+  <li><a href="r_page_f1.html"> &nbsp; redirect loop 302</a>r_page_f1 (302)</li>
+</ul>

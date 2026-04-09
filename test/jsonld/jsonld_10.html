@@ -1,0 +1,293 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+      <li>Missing google required and recommended properties</li>
+    </ul>
+  
+      <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "sku": "trinket-12345",
+      "image": "https://example.com/photos/16x9/trinket.jpg",
+      "name": "Nice trinket",
+      "description": "Trinket with clean lines",
+      "review": {
+        "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "bestRating": "5"
+          },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.4"
+        }
+      }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Course",
+      "name": "Introduction to Computer Science",
+	"provider": {
+          "@type": "Person",
+          "name": "Don Knuth"
+      }
+    }
+    </script>
+
+   <script type="application/ld+json">
+     {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "The Adventures of Kira and Morrison",
+      "startDate": "2025-07-21T19:00-05:00",
+      "location": {
+        "@type": "Place",
+        "name": "Snickerpark Stadium"
+      }
+     }
+   </script>
+
+   <script type="application/ld+json">
+     {
+      "@context": "https://schema.org",
+      "@type": "Event",
+      "name": "The Adventures of Kira and Morrison",
+      "startDate": "2025-07-21T19:00-05:00",
+      "location": {
+          "@type": "PostalAddress",
+          "streetAddress": "100 West Snickerpark Dr",
+          "addressRegion": "PA"
+        }
+      }
+    </script>
+
+   <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Books",
+        "item": "https://example.com/books"
+      },{
+        "@type": "Thing",
+        "name": "Science Fiction"
+      }]
+   }
+    </script>
+
+   <script type="application/ld+json">
+     {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Films"
+      } }
+
+   </script>
+   <script type="application/ld+json">
+   {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the return policy?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "90 days"
+	}}, {
+        "@type": "Thing",
+        "name": "When will my credit card be charged?"
+        }, {
+        "@type": "Question",
+        "name": "Will I be charged sales tax for online orders?",
+        "acceptedAnswer": {
+          "@type": "Thing",
+            "name":"test"}
+        }]
+   }
+   </script>
+ <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Angry Birds",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD"
+      }
+    }
+ </script>
+
+
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "DataFeed",
+  "dataFeedElement": [
+    {
+	"@type": "Book",
+	"name": "The Catcher in the Rye",
+	"workExample": [
+        {
+          "@type": "Book",
+          "isbn": "9787543321724",
+          "bookEdition": "Mass Market Paperback",
+          "bookFormat": "https://schema.org/Paperback",
+          "inLanguage": "en"
+        }
+      ]
+   }
+  ]
+}
+ </script>
+
+ <script type="application/ld+json">
+
+{
+  "@context": "https://schema.org",
+  "@type": "DataFeed",
+  "dataFeedElement": [
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "@id": "https://example.com/work/the_catcher_in_the_rye",
+      "url": "https://example.com/work/the_catcher_in_the_rye",
+      "workExample": [
+        {
+          "@type": "Book",
+          "@id": "https://example.com/edition/the_catcher_in_the_rye_paperback",
+          "isbn": "9787543321724",
+          "bookEdition": "Mass Market Paperback",
+          "inLanguage": "en",
+          "url": "https://example.com/edition/the_catcher_in_the_rye_paperback",
+          "potentialAction": {
+            "@type": "ReadAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://example.com/store/9787543321724"
+            },
+            "expectsAcceptanceOf": {
+              "@type": "Offer",
+	      "category": "purchase"
+            }
+          }
+        } ] } ],
+  "dateModified": "2018-09-10T13:58:26.892Z" }
+
+ </script>
+
+ <script type="application/ld+json">
+ {
+  "@context": "https://schema.org",
+  "@type": "DataFeed",
+     "dataFeedElement": [
+      {
+      "@context": "https://schema.org",
+      "@type":"LibrarySystem",
+      "@id":"https://example.com/library-systems/100",
+      "name":"Santa Clara County Library District",
+      "member":
+      {
+        "@type":"Library",
+        "@id":"https://example.com/library-branches/1001",
+        "name":"Campbell Library",
+        "location":{
+           "@type":"PostalAddress",
+           "streetAddress":"77 Harrison Ave",
+           "postalCode":"95008",
+           "addressCountry":"US"
+        }
+      }}]
+ }
+ </script>
+ <script type="application/ld+json">
+  {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to create a Trivia action",
+      "video": {
+        "@type": "VideoObject",
+        "name": "Build a Trivia Game",
+        "hasPart": [
+          {
+            "@type": "Clip",
+            "name": "Open Actions on Google Console",
+            "startOffset": 29
+          },
+          {
+            "@type": "Chapter",
+            "name": "Select Trivia Template"
+          }
+        ]},
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Open Actions on Google Console",
+          "text": "Navigate to https://console.actions.google.com to get started.",
+          "url": "https://example.com/tie#step1",
+          "video": {
+            "@id": "Clip1"
+          }
+        }
+      ]
+}
+ </script>
+ <script type="application/ld+json">
+   {
+      "@context": "https://schema.org",
+      "@type": ["VideoObject", "LearningResource"],
+      "name": "An introduction to XYZ",
+      "hasPart": {
+        "@type": "LearningResource",
+        "name": "Example problem 1: suspended wires"
+      }
+  }
+ </script>
+
+ <script type="application/ld+json">
+ {
+     "@context": "https://schema.org",
+     "@graph": [
+	 {
+	     "@type": "ImageObject",
+	     "name": "example.com/img.jpg"
+	 },
+	 {
+	     "@type": "QAPage",
+	     "mainEntity": {
+		 "@type": "Question",
+		 "name": "How many ounces are there in a pound?",
+		 "answerCount": 3
+	     }
+	 },
+	 {
+	     "@type": "QAPage",
+	     "mainEntity": {
+		 "@type": "Question",
+		 "name": "How many ounces in a pound?",
+		 "answerCount": 3,
+		 "acceptedAnswer": {
+		     "@type": "Answer",
+		     "text": "16 ounces"
+		 }
+	     }
+	 }
+     ]
+ }
+ </script>
+
+
+  </head>
+
+  <body>
+  </body>
+</html>

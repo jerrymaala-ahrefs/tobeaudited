@@ -1,0 +1,84 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+	  <li>Cyclic references with @ids</li>
+	  <li>Properties for same @id defined across multiple objects</li>
+	  <li>Use id instead of @id</li>
+    </ul>
+  
+
+    <script type="application/ld+json">
+      {
+	"@context":"https://schema.org",
+	"@graph":[
+	    {"@type":"WebPage",
+	     "@id":"webp",
+	     "url":"https://example.com/page1.html",
+	     "video":{"@id":"video"}},
+
+	    {"@type":"VideoObject",
+	     "@id":"video",
+	     "isPartOf":{"@id":"webp"}}
+	]
+      }
+  </script>
+  <script type="application/ld+json">
+    {
+	"@context":"https://schema.org",
+        "@graph": [
+	    {"@type":"WebPage", 
+             "@id":"webp",
+	     "url":"https://www.example.com/page1.html",
+	     "hasPart":{"@id":"webp", "name":"page one"}} 
+        ]
+    }
+  </script>
+
+  <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@graph":[
+     	{"@type":"WebPage", 
+	 "@id":"webp",
+	 "url":"abc",
+	 "video":{"@id":"video","name":"vid2"}},
+     
+	{"@type":"VideoObject",
+	 "@id":"video",
+	 "about":{"@id":"webp", "name":"abc"}},
+    
+	{"@type":"VideoObject",
+	 "@id":"video",
+	 "name":"vid"},
+    
+	{"@type":"VideoObject",
+	 "@id":"video",
+	 "duration":42,
+	 "about":{"@id":"webp", "name":"abcd"}}
+	]
+    }
+  </script>
+
+    <script type="application/ld+json">
+    {
+    "@context":"https://schema.org",
+    "@graph":[
+	{"@type":"VideoObject",
+	 "id":"video",
+	 "name":"a tutorial"},
+
+	{"@type":"VideoObject",
+	 "@id":"video",
+	 "duration": "42" }
+	]
+    }
+  </script>
+
+   
+ </head>
+
+ <body>
+ </body>
+ 
+</html>

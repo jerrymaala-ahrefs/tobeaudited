@@ -1,0 +1,421 @@
+<html>
+  <head>
+    <h3>What to test</h3>
+    <ul>
+      <li>A couple of complex Yoast examples</li>
+    </ul>
+  
+    <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "Organization",
+              "@id": "https://www.example.com/#/schema/Organization/1",
+              "name": "Example Orgnaization",
+              "url": "https://www.example.com/",
+              "sameAs": [
+                  "https://www.facebook.com/example/",
+                  "https://www.instagram.com/example/",
+                  "https://www.linkedin.com/example/",
+                  "https://www.youtube.com/example/",
+                  "https://www.pinterest.com/example/",
+                  "https://en.wikipedia.org/wikiexample/",
+                  "https://twitter.com/example/"
+              ],
+              "logo": {
+                  "@type": "ImageObject",
+                  "@id": "https://www.example.com/images/example.jpg",
+                  "url": "https://www.example.com/images/example.jpg",
+                  "contentUrl": "https://www.example.com/images/example.jpg",
+                  "width": 120,
+                  "height": 120,
+                  "caption": "Example Image"
+              },
+              "image": {
+                  "@id": "https://www.example.com/images/example.jpg"
+              }
+          },
+          {
+              "@type": "WebSite",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
+              "url": "https://www.example.com/",
+              "name": "Example Website",
+              "publisher": {
+                  "@id": "https://www.example.com/#/schema/Organization/1"
+              },
+              "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.example.com/?s={search_term_string}",
+                  "query-input": "required name=search_term_string"
+              }
+          },
+          {
+              "@type": [
+                  "WebPage",
+                  "ItemPage"
+              ],
+              "@id": "https://www.example.com/products/example-page/",
+              "url": "https://www.example.com/products/example-page/",
+              "inLanguage": "en-US",
+              "breadcrumb": {
+                  "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
+              },
+              "name": "Example Product Page",
+              "isPartOf": {
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
+              },
+              "datePublished": "2015-09-14T08:13:22+00:00",
+              "dateModified": "2019-03-28T12:46:37+00:00",
+              "description": "Example description"
+          },
+          {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
+              "itemListElement": [
+                  {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.example.com/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Products",
+                      "item": "https://www.example.com/products/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Example Page"
+                  }
+              ]
+          },
+          {
+              "@type": "Product",
+              "@id": "https://www.example.com/#/schema/Product/abc123",
+              "name": "Vneck Tshirt",
+              "image": {
+                  "@id": "https://www.example.com/images/example-2.jpg"
+              },
+              "description": "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.",
+              "sku": 83,
+              "offers": [
+                  {
+                      "@type": "Offer",
+                      "@id": "https://www.example.com/#/schema/Offer/abc123",
+                      "priceSpecification": {
+                          "@type": "PriceSpecification",
+                          "price": "18.00",
+                          "priceCurrency": "EUR",
+                          "valueAddedTaxIncluded": "false"
+                      },
+                      "availability": "https://schema.org/InStock",
+                      "url": "https://www.example.com/products/example-page/",
+                      "seller": {
+                          "@id": "https://www.example.com/#/schema/Organization/1"
+                      }
+                  }
+              ],
+              "aggregateRating": {
+                  "@type": "AggregateRating",
+                  "ratingValue": "4.50",
+                  "reviewCount": 2
+              },
+              "review": [
+                  {
+                      "@type": "Review",
+                      "@id": "https://www.example.com/#/schema/Review/abc123",
+                      "datePublished": "2019-04-09T09:10:12+00:00",
+                      "description": "What a nice turtle shirt.",
+                      "reviewRating": {
+                          "@type": "Rating",
+                          "ratingValue": "4"
+                      },
+                      "author": {
+                          "@type": "Person",
+                          "name": "Tim"
+                      }
+                  },
+                  {
+                      "@type": "Review",
+                      "@id": "https://www.example.com/#/schema/Review/def456",
+                      "datePublished": "2019-04-09T09:10:29+00:00",
+                      "description": "Awesome shirt",
+                      "reviewRating": {
+                          "@type": "Rating",
+                          "ratingValue": "5"
+                      },
+                      "author": {
+                          "@type": "Person",
+                          "name": "Patrice"
+                      }
+                  }
+              ],
+              "brand": {
+                  "@type": "Organization",
+                  "name": "Turtle"
+              },
+              "mainEntityOfPage": {
+                  "@id": "https://www.example.com/products/example-page/"
+              },
+              "manufacturer": {
+                  "@type": "Organization",
+                  "name": "Turtle"
+              }
+          }
+      ]
+  }
+    </script>
+
+  <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [
+          {
+              "@type": "Organization",
+              "@id": "https://www.example.com/#/schema/Organization/1",
+              "name": "Example Orgnaization",
+              "url": "https://www.example.com/",
+              "sameAs": [
+                  "https://www.facebook.com/example/",
+                  "https://www.instagram.com/example/",
+                  "https://www.linkedin.com/example/",
+                  "https://www.youtube.com/example/",
+                  "https://www.pinterest.com/example/",
+                  "https://en.wikipedia.org/wikiexample/",
+                  "https://twitter.com/example/"
+              ],
+              "logo": {
+                  "@type": "ImageObject",
+                  "@id": "https://www.example.com/images/example.jpg",
+                  "url": "https://www.example.com/images/example.jpg",
+                  "contentUrl": "https://www.example.com/images/example.jpg",
+                  "width": 120,
+                  "height": 120,
+                  "caption": "Example Image"
+              },
+              "image": {
+                  "@id": "https://www.example.com/images/example.jpg"
+              }
+          },
+          {
+              "@type": "WebSite",
+              "@id": "https://www.example.com/#/schema/WebSite/1",
+              "url": "https://www.example.com/",
+              "name": "Example Website",
+              "publisher": {
+                  "@id": "https://www.example.com/#/schema/Organization/1"
+              },
+              "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": "https://www.example.com/?s={search_term_string}",
+                  "query-input": "required name=search_term_string"
+              }
+          },
+          {
+              "@type": "WebPage",
+              "@id": "https://www.example.com/blog/example-article/",
+              "url": "https://www.example.com/blog/example-article/",
+              "inLanguage": "en-US",
+              "breadcrumb": {
+                  "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123"
+              },
+              "name": "Example Page",
+              "isPartOf": {
+                  "@id": "https://www.example.com/#/schema/WebSite/1"
+              },
+              "datePublished": "2015-09-14T08:13:22+00:00",
+              "dateModified": "2019-03-28T12:46:37+00:00",
+              "description": "Example description"
+          },
+          {
+              "@type": "Article",
+              "@id": "https://www.example.com/#/schema/Article/abc123",
+              "headline": "Example article headline",
+              "description": "Example article description",
+              "isPartOf": {
+                  "@id": "https://www.example.com/blog/example-article/"
+              },
+              "mainEntityOfPage": {
+                  "@id": "https://www.example.com/blog/example-article/"
+              },
+              "datePublished": "2019-07-10T08:08:40+00:00",
+              "dateModified": "2019-07-10T08:43:03+00:00",
+              "commentCount": 6,
+              "articleSection": ["Cats","Dogs","Recipes"],
+              "author": {
+                  "@id": "https://www.example.com/#/schema/Person/abc123"
+              },
+              "publisher": {
+                  "@id": "https://www.example.com/#/schema/Organization/1"
+              },
+              "image": [
+                  {
+                      "@id": "https://www.example.com/images/example-2.jpg"
+                  },
+                  {
+                      "@id": "https://www.example.com/images/example-3.jpg"
+                  }
+              ],
+              "video": [
+                  {
+                      "@id": "https://www.example.com/#/schema/VideoObject/abc123"
+                  },
+                  {
+                      "@id": "https://www.example.com/#/schema/VideoObject/def456"
+                  }
+              ]
+          },
+          {
+              "@type": "Person",
+              "@id": "https://www.example.com/#/schema/Person/abc123",
+              "name": "Example person name",
+              "image": {
+                  "@id": "https://www.example.com/images/example-4.jpg"
+              },
+              "sameAs": [
+                  "https://www.wikipedia.com/example-organization",
+                  "https://www.linkedin.com/company/1234"
+              ]
+          },
+          {
+              "@type": "BreadcrumbList",
+              "@id": "https://www.example.com/#/schema/BreadcrumbList/abc123",
+              "itemListElement": [
+                  {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "https://www.example.com/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Blog",
+                      "item": "https://www.example.com/blog/"
+                  },
+                  {
+                      "@type": "ListItem",
+                      "position": 3,
+                      "name": "Example Article"
+                  }
+              ]
+          }
+      ]
+  }
+    </script>
+
+
+  <script type="application/ld+json">
+{
+      "@context": "https://schema.org",
+      "@graph": [{
+        "@type": "WebPage",
+        "@id": "https://yoast.com/",
+        "url": "https://yoast.com/",
+        "name": "SEO for everyone &bull; Yoast",
+        "isPartOf": {
+          "@id": "https://yoast.com/#website"
+        },
+        "about": {
+          "@id": "https://yoast.com/#organization"
+        },
+        "datePublished": "2015-09-14T08:13:22+00:00",
+        "dateModified": "2023-05-12T12:00:41+00:00",
+        "description": "Yoast helps you with your website's search engine optimization, with our internationally loved software and our online SEO courses.",
+        "breadcrumb": {
+          "@id": "https://yoast.com/#breadcrumb"
+        },
+        "inLanguage": "en-US",
+        "potentialAction": [{
+          "@type": "ReadAction",
+          "target": ["https://yoast.com/"]
+        }]
+      }, {
+        "@type": "BreadcrumbList",
+        "@id": "https://yoast.com/#breadcrumb",
+        "itemListElement": [{
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home"
+        }]
+      }, {
+        "@type": "WebSite",
+        "@id": "https://yoast.com/#website",
+        "url": "https://yoast.com/",
+        "name": "Yoast",
+        "description": "SEO for everyone",
+        "publisher": {
+          "@id": "https://yoast.com/#organization"
+        },
+        "potentialAction": [{
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://yoast.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }],
+        "inLanguage": "en-US",
+        "copyrightHolder": {
+          "@id": "https://yoast.com/#organization"
+        }
+      }, {
+        "@type": ["Organization", "Brand"],
+        "@id": "https://yoast.com/#organization",
+        "name": "Yoast",
+        "url": "https://yoast.com/",
+        "logo": {
+          "@type": "ImageObject",
+          "inLanguage": "en-US",
+          "@id": "https://yoast.com/#/schema/logo/image/",
+          "url": "https://yoast.com/app/uploads/2020/09/Yoast_Icon_SocialMedia_500x500.png",
+          "contentUrl": "https://yoast.com/app/uploads/2020/09/Yoast_Icon_SocialMedia_500x500.png",
+          "width": 500,
+          "height": 500,
+          "caption": "Yoast"
+        },
+        "image": {
+          "@id": "https://yoast.com/#/schema/logo/image/"
+        },
+        "sameAs": ["https://www.facebook.com/yoast", "https://twitter.com/yoast", "https://www.instagram.com/yoast/", "https://www.linkedin.com/company/1414157/", "https://www.pinterest.com/yoast/", "https://www.youtube.com/yoast", "https://en.wikipedia.org/wiki/Yoast", "https://g.co/kgs/4H5sG2", "https://g.co/kgs/a9XfUu"],
+        "founder": {
+          "@type": "Person",
+          "name": "Joost de Valk",
+          "url": "https://yoast.com/about-us/team/joost-de-valk/",
+          "sameAs": "https://yoast.com/about-us/team/joost-de-valk/"
+        },
+        "foundingDate": "2010-05-01",
+        "numberOfEmployees": 116,
+        "slogan": "SEO for Everyone",
+        "description": "Yoast helps you with your website optimization, whether it be through our widely used SEO software or our online SEO courses: we&#039;re here to help.",
+        "legalName": "Yoast BV",
+        "parentOrganization": {
+          "@type": "Organization",
+          "name": "Newfold Digital",
+          "description": "Newfold Digital is a leading web presence solutions provider serving millions of small-to-medium businesses globally.",
+          "url": "https://newfold.com/",
+          "sameAs": ["https://newfold.com/"],
+          "logo": "https://yoast.com/app/uploads/2022/01/newfold-logo.png"
+        },
+        "memberOf": {
+          "@type": "Organization",
+          "name": "World Wide Web Consortium (W3C)",
+          "description": "The World Wide Web Consortium (W3C) is an international community that develops open standards to ensure the long-term growth of the Web.",
+          "url": "https://w3.org/",
+          "sameAs": ["https://w3.org/"],
+          "logo": "https://www.w3.org/Icons/w3c_main.png"
+        }
+      }]
+    }
+
+  </script>
+
+ </head>
+
+ <body>
+ </body>
+ 
+</html>

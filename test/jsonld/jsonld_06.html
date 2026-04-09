@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+
+    <script defer type="application/javascript" src="https://patches.ahrefs.me/6bee04a5-f8b9-4ef1-b382-7bbe712db1ed.js"></script>
+    <h3>What to test (microdata)</h3>
+    <ul>
+      <li>Invalid property</li>
+      <li>Multi-label items</li>
+    </ul>
+
+
+  <div itemscope itemtype ="https://schema.org/Movie">
+	<h2 itemprop="name">Avatar</h2>
+	<div itemprop="director" itemscope itemtype="https://schema.org/Person">
+	Director: <span itemprop="name">James Cameron</span> (born <span itemprop="birthDate">August 16, 1954</span>)
+	</div>
+	<span itemprop="genre">Science fiction</span>
+	<span itemprop="distance">123</span>
+	<a href="../movies/avatar-theatrical-trailer.html" itemprop="trailer">Trailer</a>
+  </div>
+
+    <div itemscope itemtype ="https://schema.org/Article">
+	<h2 itemprop="name headline">Avatar review</h2>
+	<div itemprop="author" itemscope itemtype="https://schema.org/Person">
+	By: <span itemprop="name">Jane Doe</span> 
+	</div>
+    </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Title of a News Article",
+    "image": [
+      "https://example.com/photos/1x1/photo.jpg",
+      "https://example.com/photos/4x3/photo.jpg",
+      "https://example.com/photos/16x9/photo.jpg"
+    ],
+    "datePublished": "2015-02-05T08:00:00+08:00",
+    "dateModified": "2015-02-05T09:20:00+08:00",
+    "interactionCount": {
+      "@type": "UserInteraction",
+      "about": "test"
+      },
+    "author": {
+      "@type": "UserInteraction",
+      "about": "test"
+      },
+    "autho": [{
+      "@type": "ImageObject",
+      "name2": "Jane Doe",
+      "url": "https://example.com/profile/janedoe123"
+    },{
+      "@type": "Person",
+      "name": "John Doe",
+      "url": "https://example.com/profile/johndoe123"
+    }]
+    }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Taxi",
+    "name": "the taxi company"
+  }
+  </script>
+
+ </head>
+
+  <body>
+  </body>
+</html>
